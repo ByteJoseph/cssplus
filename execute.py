@@ -1,5 +1,4 @@
 import csscompressor
-
 import re
 
 def parse_variables(lines):
@@ -26,8 +25,9 @@ def compile(input_code):
 
     for line in lines:
         stripped_line = line.strip()
-        if stripped_line and not stripped_line.startswith('$'):
-            current_indent = len(line) - len(stripped_line)
+        current_indent = len(line) - len(stripped_line)
+        
+        if stripped_line and not stripped_line.startswith('$') and not stripped_line.startswith('/*'):
             if current_indent > indent_level:
                 indent_stack.append('{' * ((current_indent - indent_level) // 4))
             elif current_indent < indent_level:
