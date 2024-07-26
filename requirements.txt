@@ -1,5 +1,3 @@
 fastapi[all]
 jsmin
-uvicorn
-gunicorn
 csscompressor
