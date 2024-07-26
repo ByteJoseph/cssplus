@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    async function sendStylesToServer() {
+async function sendStylesToServer() {
         if (!navigator.onLine) {
             console.log('No internet connection.');
             return;
@@ -27,5 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    sendStylesToServer();
-});
+sendStylesToServer();
