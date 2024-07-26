@@ -1,4 +1,5 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI 
+from fastapi import Query
 from fastapi.responses import PlainTextResponse
 from jsmin import jsmin
 from fastapi.middleware.cors import CORSMiddleware
