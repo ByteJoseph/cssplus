@@ -30,3 +30,7 @@ async def bridge():
 async def compile_css(var: str = Query(...)):
     print(f"Received CSS content: {var}")
     return compile(var)
+
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
