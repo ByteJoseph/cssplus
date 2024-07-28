@@ -1,4 +1,3 @@
-document.body.style.visibility = 'hidden';
 document.addEventListener('DOMContentLoaded', () => {
     async function sendStylesToServer() {
         if (!navigator.onLine) {
@@ -29,5 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     sendStylesToServer();
-    document.body.style.visibility = 'visible';
 });
