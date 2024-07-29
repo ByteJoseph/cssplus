@@ -1,3 +1,9 @@
+document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'loading') {
+                document.body.style.display = 'none';
+            }
+        });
+
 document.addEventListener('DOMContentLoaded', () => {
     async function sendStylesToServer() {
         if (!navigator.onLine) {
@@ -28,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     sendStylesToServer();
+    document.body.style.display = 'block';
 });
